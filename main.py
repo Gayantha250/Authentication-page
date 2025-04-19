@@ -1,7 +1,9 @@
 from flask import Flask
 from websites.views import views
 from websites.auth import auth
+from websites import create_app
 
+app = create_app()
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'your_secret_key'  # Needed for session, flash, etc.
